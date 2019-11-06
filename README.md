@@ -1,6 +1,8 @@
 # RESTful-API-with-Symfony-4
 RESTful API with Symfony 4 + FOSRestBundle + JMSSerializer
 RESTful API with Symfony 4 + FOSRestBundle + JMSSerializer
+
+
   /bin/console debug:router
  ----------------------- -------- -------- ------ -------------------------- 
   Name                    Method   Scheme   Host   Path                      
