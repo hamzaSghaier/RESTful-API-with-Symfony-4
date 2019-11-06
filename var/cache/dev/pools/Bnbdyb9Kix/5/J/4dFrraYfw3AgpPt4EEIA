@@ -1,0 +1,33 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['FOS\\RestBundle\\Controller\\Annotations\\View'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\View')),
+        clone ($p['FOS\\RestBundle\\Controller\\Annotations\\Post'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\Post')),
+    ],
+    null,
+    [
+        'FOS\\RestBundle\\Controller\\Annotations\\View' => [
+            'statusCode' => [
+                201,
+            ],
+        ],
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                1 => '/places',
+            ],
+            'methods' => [
+                1 => [
+                    'POST',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+    ],
+    []
+);

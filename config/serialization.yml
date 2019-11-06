@@ -1,0 +1,22 @@
+App\Entity\Place:
+    attributes:
+        id:
+            groups: ['place', 'price']
+        name:
+            groups: ['place', 'price']
+        address:
+            groups: ['place', 'price']
+        prices:
+            groups: ['place']
+
+
+App\Entity\Price:
+    attributes:
+        id:
+            groups: ['place', 'price']
+        type:
+            groups: ['place', 'price']
+        value:
+            groups: ['place', 'price']
+        place:
+            groups: ['price']

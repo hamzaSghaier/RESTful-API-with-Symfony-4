@@ -1,0 +1,33 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\Route'] ?? Registry::p('Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\Route')),
+        clone ($p['Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\Method'] ?? Registry::p('Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\Method')),
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/places',
+            ],
+            'name' => [
+                'places_list',
+            ],
+        ],
+        'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\Method' => [
+            'methods' => [
+                1 => [
+                    'GET',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+    ],
+    []
+);

@@ -1,0 +1,5 @@
+framework:
+    router:
+        strict_requirements: true
+    serializer:
+        enabled: true

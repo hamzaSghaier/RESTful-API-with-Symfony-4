@@ -1,0 +1,12 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+# places:
+#     type:     rest
+#    resource: App\Controller\PlaceController
+# users:
+#     type:     rest
+#     resource: App\Controller\UserController
+
+

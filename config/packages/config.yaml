@@ -1,0 +1,16 @@
+framework:
+    serializer: { enable_annotations: true }
+fos_rest:
+    service:
+        serializer: "fos_rest.serializer.jms"
+    routing_loader:
+        include_format:       false
+    view:
+        view_response_listener: true
+    format_listener:
+        rules:
+            - { path: '^/', priorities: ['json'], fallback_format: 'json' }
+    # configuration à rajouter pour désactiver le body listener
+    body_listener:
+        enabled: true
+
